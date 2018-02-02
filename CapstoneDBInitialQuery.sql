@@ -91,6 +91,7 @@ create table PurchaseRequest (
 	Status nvarchar(10) not null default 'NEW',
 	Total decimal(14,2) not null default 0.0,
 	UserId int not null foreign key references [User],
+	Active bit not null default 1
 	)
 
 insert into PurchaseRequest (Description, Justification, DeliveryMode, Status, Total, UserId)
